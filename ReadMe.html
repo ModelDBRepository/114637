@@ -1,0 +1,36 @@
+<html>
+<h3>20130329: Note from the ModelDB administrator: </h3>
+
+This model used to be supplied by the far below link to the ybanitt
+web site which is broken.  The model is now made available in this
+archive which is a copy of the original model with some modifications
+including this ReadMe.  The ReadMe file in the original code
+identifies ssc.hoc as the main file.
+
+<p/>
+
+Michael Hines suggested an edit which has been incorporated here that
+makes the old code compatible with the most recent version of neuron:
+in iA.mod a tadj calculation was moved out of the INITIAL block to
+below the TABLE statement in PROCEDURE mhn(v). Michael explains the
+reasoning:
+
+<p/>
+
+"The underlying behavior change is that threads demand that tables be
+computed before the call to INITIAL. At that time, of course, tadj=0
+hence a divide by 0 and a cascade of other things.  I regret that
+change from old implementation dependent behavior ... The underlying
+issue is that multiple threads are calling INITIAL and it is generally
+a bad idea in that situation to assign a value to a global variable.
+<p/> The catch 22 is that if you turn off the table( usetable_iA = 0)
+then the calculation of tadj is fairly expensive."
+
+<br/>
+<h1>Index of /~ybanitt/SSC_model</h1>
+<pre><img src="index_files/blank.gif" alt="Icon "> <a href="http://www.spike.ls.huji.ac.il/%7Eybanitt/SSC_model/?C=N;O=D">Name</a>                    <a href="http://www.spike.ls.huji.ac.il/%7Eybanitt/SSC_model/?C=M;O=A">Last modified</a>      <a href="http://www.spike.ls.huji.ac.il/%7Eybanitt/SSC_model/?C=S;O=A">Size</a>  <a href="http://www.spike.ls.huji.ac.il/%7Eybanitt/SSC_model/?C=D;O=A">Description</a><hr><img src="index_files/back.gif" alt="[DIR]"> <a href="http://www.spike.ls.huji.ac.il/%7Eybanitt/">Parent Directory</a>                             -   
+<img src="index_files/compressed.gif" alt="[   ]"> <a href="http://www.spike.ls.huji.ac.il/%7Eybanitt/SSC_model/SSC_model.tar.gz">SSC_model.tar.gz</a>        04-Dec-2006 11:19   37K  
+<hr></pre>
+<address>Apache Server at www.spike.ls.huji.ac.il Port 80</address>
+
+</body>
